@@ -11,12 +11,11 @@ function calcular() {
   horasDiarias = document.getElementById("horasDiarias").value;
   diasFerias = document.getElementById("diasFerias").value;
 
-    console.log(valorProjeto+"/"+diasEfetivos+"/"+horasDiarias+"/"+diasFerias);
     valorHora = (valorProjeto / (diasEfetivos * 4 * horasDiarias) ) + ( ( diasFerias * diasEfetivos * horasDiarias ) );
     if(isNaN(valorHora)){
       alert("Por favor, insira um valor válido");
     }
-    console.log(document.getElementById("result").innerHTML = "R$ "+valorHora.toFixed(2));
+    document.getElementById("result").innerHTML = "R$ "+valorHora.toFixed(2);
   
   }
   
@@ -26,7 +25,6 @@ function calcular() {
 
   for (i = 0; i < acc.length; i++) {
     acc[i].addEventListener("click", function() {
-      console.log("passou");
       this.classList.toggle("active");
       let panel = this.nextElementSibling;
       if (panel.style.maxHeight) {
