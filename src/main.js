@@ -1,22 +1,24 @@
+let valorProjeto = "";
+let diasEfetivos = "";
+let horasDiarias = "";
+let diasFerias = "";
+let valorHora= "";
+
 function calcular() {
-    let valorProjeto = document.getElementById("valorProjeto").value;
-    let diasEfetivos = document.getElementById("diasEfetivos").value;
-    let horasDiarias = document.getElementById("horasDiarias").value;
-    let diasFerias = document.getElementById("diasFerias").value;
-    
-    
+
+  valorProjeto = document.getElementById("valorProjeto").value;
+  diasEfetivos = document.getElementById("diasEfetivos").value;
+  horasDiarias = document.getElementById("horasDiarias").value;
+  diasFerias = document.getElementById("diasFerias").value;
+
     console.log(valorProjeto+"/"+diasEfetivos+"/"+horasDiarias+"/"+diasFerias);
-    let valorHora = (valorProjeto / (diasEfetivos * 4 * horasDiarias) ) + ( ( diasFerias * diasEfetivos * horasDiarias ) );
+    valorHora = (valorProjeto / (diasEfetivos * 4 * horasDiarias) ) + ( ( diasFerias * diasEfetivos * horasDiarias ) );
     if(isNaN(valorHora)){
       alert("Por favor, insira um valor válido");
-    }else{
-      document.getElementById("result").innerHTML = "R$ "+valorHora.toFixed(2);
-      e.preventDefault();
     }
-    
+    console.log(document.getElementById("result").innerHTML = "R$ "+valorHora.toFixed(2));
+  
   }
-
-  // função para maximizar e minimizar o conteúdo
   
   function sinal(){
   let acc = document.getElementsByClassName("accordion");
@@ -24,6 +26,7 @@ function calcular() {
 
   for (i = 0; i < acc.length; i++) {
     acc[i].addEventListener("click", function() {
+      console.log("passou");
       this.classList.toggle("active");
       let panel = this.nextElementSibling;
       if (panel.style.maxHeight) {
