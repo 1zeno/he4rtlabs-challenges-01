@@ -5,7 +5,7 @@ let diasFerias = "";
 let valorHora= "";
 
 function calcular() {
-
+console.log(valorHora);
   valorProjeto = document.getElementById("valorProjeto").value;
   diasEfetivos = document.getElementById("diasEfetivos").value;
   horasDiarias = document.getElementById("horasDiarias").value;
@@ -19,21 +19,12 @@ function calcular() {
   
   }
   
-  function sinal(){
-  let acc = document.getElementsByClassName("accordion");
-  let i;
+  function infoClick( event ){
+    const element = document.getElementById(event.target.id+"Text");
+    const name = element.className;
+    const search = name.split(" ").indexOf("open");
+    search !== -1 ? element.classList.remove("open") : element.classList.add("open");
 
-  for (i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function() {
-      this.classList.toggle("active");
-      let panel = this.nextElementSibling;
-      if (panel.style.maxHeight) {
-        panel.style.maxHeight = null;
-      } else {
-        panel.style.maxHeight = panel.scrollHeight + "px";
-      } 
-    });
-  }
   }
 
 

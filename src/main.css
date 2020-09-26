@@ -1,79 +1,38 @@
 body{
     margin:0;
 }
-.title{
+.header{
     display:flex;
     background-color: #8743cc;
     margin-bottom: 1em;
-}
-.card_title{
-    display: flex;
     justify-content: center;
-    color:#8743cc;
-    
-}
-.title-header{
-    padding: 0% 27%;
-    align-self: center;
-}
-.content{
-    display: flex;
-    justify-content: center;
-}
-.card{
-    max-width: 1000px;
-    margin:0 auto;
-    padding-left: 24px;
-    padding-right: 24px;
-}
-
-.card-text{
-    display:flex;
-    flex-direction: column;
-    width: 50%;
-    padding-left: 24px;
-}
-.card-content{
-    display:flex;
-    align-items: center;
-    border: 1px solid #444 ;
-    border-radius: 20px 20px;
-    box-shadow: 1px 1px 1px 1px #444 ;
-    min-width: 30%; 
-    background-color: #fff;
-    
-}
-.form-card{
-    padding-left: 5em;
-    padding-right: 2em;
-}
-.card-input{
-    display:flex;
-    justify-content: center;
-    margin-top: 1.5em;
-    margin-bottom: 1.5em;
-    padding-left: 24px;
-    width:100%;
-}
-
-.button-calc{
-    display:flex;
-    justify-content: center;
-    padding-left: 50px;
+    box-shadow: 0px 2px 5px;
 }
 .logo{
     width: 200px;
     
 }
 
-
-.info-text-title{
-    flex-direction: column;
+.title{
+    display:flex;
+    justify-content: center;
+    color:#8743cc;
 }
 
-.accordion {
-    background-color: #fff;
-    color: #8743cc;
+.card{
+    margin: 4em;
+    background-color: #E7DAF9;
+}
+.cardText{
+    padding-right: 2em;
+}
+.cardContent{
+    display:flex;
+}
+
+.info{
+    background-color: #8743cc;
+    color: #ffffff;
     cursor: pointer;
     padding: 18px;
     width: 100%;
@@ -81,67 +40,17 @@ body{
     text-align: left;
     outline: none;
     font-size: 20px;
-    transition: 0.4s;
-  }
-  
-  .active, .accordion:hover {
-    background-color: #fff;
-  }
-  
-  .accordion:after {
-    content: '\002B';
-    color: #8743cc;
-    font-weight: bold;
-    float: right;
-    margin-left: 5px;
-  }
-  
-  .active:after {
-    content: "\2212";
-  }
-  .info-text-title {
-    padding: 0 18px;
-    background-color: #fff;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
-  }
-
-
-.button-heart{
-    width: 100%;
-    background-color: #8743cc;
-    border: 2px solid #8743cc ;
-    border-radius: 20px 20px;
-    box-shadow: 1px 1px 1px 1px #444 ;
-    color: #fff;
-    font-size:15px;
+    transition: 1.5s;
+    box-shadow: 0px 0px 2px;
+}
+.infoText{
+    display: none;
+}
+.info:hover{
+    background-color: #C094D6;
 }
 
-.result-calc{
-    display:flex;
-    margin-top: 1.5em;
-    margin-bottom: 1.5em;
-    color: #8743cc;
-    justify-content: center;
-    font-size:20px;
-    max-width: 119px;
-    
-}
-.span-calc{
+
+.open{
     display: flex;
-    font-size:20px;
-    flex-wrap: nowrap;
 }
-
-p{
-    font-size:17px;
-    color: #8743cc;
-}
-
-input{
-    text-align: center;
-    border: 1px solid #444 ;
-    border-radius: 10px 10px;
-}
-
